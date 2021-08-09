@@ -1,0 +1,6 @@
+Nmpap ile özelleştirilmiş taramalar:
+    Nmap ile işletim sistemi tespiti -> nmap -O <target_ip>
+    Nmap ile açık port tespiti -> nmap <target_ip>
+    Nmap ile çalışan servisleri ve sürümlerini öğrenmek -> nmap -sV <target_ip>
+    Nmap ile raporlama yapmak -> nmap -sS -oN <rapor yolu ve adı> <target_ip>
+

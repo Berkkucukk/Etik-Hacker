@@ -1,0 +1,38 @@
+Hydra:
+    Saldırı yapacağımız sistemin kullanıcı adı için ve parola için farklı wordlister oluşturmak gerekir.
+    ->hydra -L <kullanıcı_adı_wordlist> -P <parola_worlist> <servis_adı://ip_adresi>
+    
+Medusa:
+    Saldırı yapacağımız sistemin kullanıcı adı için ve parola için farklı wordlister oluşturmak gerekir.
+    ->medusa -h <hedef_ip> -U <kullanıcı_adı_wordlist> -P <parola_worlist> -M <servis_adı>
+    
+Rar ve Zip Dosyalarına Parola Saldırısı:
+    ->apt-get install zip
+    ->apt-get install rar
+    
+    Rar dosya şifreleme:
+        ->rar a -ap -p <rar_ismi_belirliyoruz> <şifrelenecek_rar_ismi>
+        Şifremizi belirliyoruz.
+    Zip dosya şifreleme:
+        ->zip -r -e <zip_ismi_belirliyoruz> <şifrelenecek_zip_ismi>
+    
+    ->git clone https://github.com/dwt1020/pyrarcr.git 
+    İndirdiğimiz dosyaya giriyoruz.
+    ->python3 pyrarcr.py <şifreli_rar/zip>
+    
+İnstagram Hesaplarına BruteForce Sladırısı:
+    ->git clone https://github.com/Pure-LOGIC/Instagram.git 
+    ->cd Instagram
+    ->pip3 install -r requirements.txt
+    Kurulum tamam. Saldırıyı gerçekleştirebilmemiz için bir adet wordliste ihtiyacımzı var. Oluşturduğumuz wordlisti indirdiğimiz Instagram klasörünün içerisine atıyoruz.
+    ->python3 instagram.py <kullanıcı_adı> <wordlist> -m 3
+    
+Hash Algoritması Saldırısı:
+    Hash algoritması ile şifreleme:
+        Arama motoruna www.md5.cz yazarak gidiyoruz. MD5 algoritması ile şifrelenmesini istediğimiz metni giriyoruz.MD5 dışında SHA-1 algoritmasıda güvenlidir.
+    Hash algoritması türünü öğrenme:
+        ->hash-identifier
+        Aracı çalıştırdıktan sonra bizden hash kodu istemekte. Hash kodumuzu verdiğimiz zaman bize hash şifreleme türünü verir.
+    Hash algoritması ile şifrelenen şifreleri kırma:
+        ->findmayhash <hash_türü_büyük_harflerle> -h <Hash_kodu>
+        Bu araçla basit hash kodlarını kırabilirsiniz.

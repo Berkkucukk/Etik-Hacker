@@ -1,0 +1,28 @@
+Dos/DDos Attack Nedir:
+    Dos saldırılarında amaç sistemin kaldırabileceği alanın üstüne çıkararak hizmeti akstmak veya sistemi çalışamaz hale getirmektir.
+    DDos saldırıları ise birden fazla noktadan, eş zamanlı olarak saldırırnın gerçekleştirildiği saldırı tipidir. İki saldırının da kısaca amacı sistemlerdeki hizmeti devre dışı bırakmak veya aksatmaktır. Dos/DDos saldırısı bir siber saldırı olsa da bir hacking yöntemi değildir.
+    
+    
+Dos/DDos Saldırı Çeşitleri:
+    SYN Flood:
+        Syn TCP'ye özgü bir özelliktir. 
+        En çok gerçekleştirilen saldırı tipidir. 
+        Saldırıyı gerçekleştirmek kadar önlemini almakta kolaydır. 
+        Saldırı sahte Ip adresleri üzerinden gerçekleştirilir. 
+        Sorunun temel kaynağı Ip adreslerinin sahte olup olmadığının ayırt edilememesi ve de SYN paketlerini alan tarafa paketi gönderen onaylamadan kaynak ayrılmasıdır.
+        
+    UDP Flood:
+        UDP saldırısı, UDP protokolünü kullanarak yapılan bir Dos saldırısıdır.
+        Saldırının işleyişi hedef sistemin rastgele portlarına çok sayıda UDP paketi gönderilmesine dayanır.
+        Çok fazla UDP paketine maruz kalan sistem öncelikle portu dinleyen bir uygulama var mı diye kontrol eder.
+        Her bir kontrol sırasında portu dinleyen bir uygulama olmadığını gören sistem buna karşılık olarak ICMP paketi ile karşılık verir. Bu durumda sisteme erişilemez hale gelir.
+        
+    Ping Flood:
+        Sürekli olarak ICMP paket istekleri gönderilmesiyle yapılan bir Dos saldırı çeşididir.
+        Amaç sürekli olarak gönderilen ICMP paketleri ile sistemi hizmet dışı bırakmaktadır.
+        
+    Botnet Nedir:
+        Botnet yüzlerce, binlerce hatta milyonlarca zombi bilgisayarın kullanılarak DDos saldırısının yapılmasına verilen addır.
+        Saldırganlar güvenlik zaafiyetlerinden faydalanarak bilgisayarları ve sunucuları kendi yarattıkları botnet ağına dahil ederler.
+        Botnet ağına dahil olan sisteme zombi denir.
+        Sonrasında botnet ağında bulunan tüm cihazlarlakuvvetli DDos saldırısı gerçekleştirilir.

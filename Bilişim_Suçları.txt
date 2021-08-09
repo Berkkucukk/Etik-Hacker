@@ -1,0 +1,17 @@
+5651 Sayılı Kanun:
+    5651 sayılı kanun internet ortamında yapılan yayınların düzenlemesi ve bu yayınlar yoluyla işlenen suçlarla mücadele edilmesi hakkındaki kanundur.5651 sayılı kanun loglama kanunu olarakta geçmekedir. Bu kanuna göre en az 2 yıl olmak şartı ile internet servis sağlayıcılarda log tutmaktadır.5651 sayılı kanuna göre log kayıtları 6 aydan 2 yıla kadar tutulabilirler.
+    
+Bilişim Suçları:
+    Bilgisayar veya bilgisayar ağı kullanılarak işlenen herhangi bir suçu ifade etmek için üretilmiş bir kavramdır. Örneğin MITM saldırısı yapılmasının en asgari suçu 1 yıl hapis cezasından başlamaktadır.
+    
+Bilişim Suçları Nelerdir:
+    
+    Madde 243:
+        İzinsiz ve hukuka aykırı bir şekilde bir sisteme girme ve sistemde kalmaya devam etme suçu bu maddeye girmektedir. Sisteme zarar vermeyecek olsanızda bir sisteme izinsiz ve hukuka aykırı bir şekilde girilemez.
+        Sistemde yer alan verileri silerseniz alacağınız ceza artmaktadır. 6aydan 3 yıla kadar hapis suçu verilmektedir.Sistemde yaptığınız işlemlere göre cezanız katlanabilir.
+        
+    Madde 244:
+        Bir bilişim sisteminin işleyişini bozan veya engellemeye çalışan suçlar bu maddeye girer. Bu madde ile işlenen suçların cezaları yüksektir. Kamu kurum ve kuruluşlarının bilişim sistemlerini engelleme ve bozma durumunda saldırganın alacağı ceza yarı oranda arttırılır. Eğer saldırgan bu saldırıdan haksız kazanç elde ettiyse saldırgana beşbin güne kadar adli para cezası verilir. Dos/DDos saldırıları benzeri sistemi aksatan, bozan bilişim suçları bu maddeye girmektedir.
+        
+    Madde 245:
+        Banka ve kredi kartı kullanılmasıyla ilgilidir. Her ne olursa olsun başkasına ait bir banka kartı ve kredi kartı kesinlikle kullanılamaz. Bu suçu işleyen saldırganlara para ve hapis cezası verilir. Ayrıca yasak cihaz ve program kullanımı bu programların satışını yapan kişiler de bu maddeye göre ceza almaktadır.

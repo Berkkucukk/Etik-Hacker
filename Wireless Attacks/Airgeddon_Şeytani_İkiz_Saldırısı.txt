@@ -1,0 +1,7 @@
+1.)Airgeddon'u çalıştırıyoruz.
+2.)Şeytani İkiz Saldısı (7) 'yi seçiyoruz.
+3.)Ağ kartımızı monitör moda alıyoruz (2).
+4.)Çevremizdeki ağları tarıyotuz (4).
+5.)Şeytani ikiz saldırısı ve esaret protalını seçiyoruz (9).
+6.)Deauth yöntemi olarak aireplay-ng veya md4'ü seçiyoruz.
+7.)Handshakeimiz varsa Y diyip Handshake yolunu giriyoruz yoksa N diyerek Hanshake yakalarız.

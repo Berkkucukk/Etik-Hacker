@@ -1,0 +1,12 @@
+1.)Önce Handshake yakalıyoruz. 
+2.) crunch veya cupp.py ile wordlist oluşturuyoruz.
+->aircrack-ng <handhsake> -w <wordlist>
+
+Büyük worlistlerle çalışmak:
+-> john --wordlist=<wordlist> --stdout --session=<kayıt ederken kullanmak istediğimiz isim> | aircrack-ng -w - -b <bssid> <hanshake> (Bu sayede q yaparak çıkış yaptığımızda wordlistte kaldığı yeri kaydeder ve tekrar başlatırken kaldığı yerden devam eder.)
+->john --restore=<kayıt ederken verdiğimiz isim> | aircrack-ng -w - -b <bssid> <hanshake>
+
+Çok büyük wordlistleri kaydetmeden kullanmak:
+
+-> crunch <min hane sayısı> <max hane sayısı> <kullanılacak karakterler> | john --stdin --session=<kayıt adı> --stdout | aircrack-ng -w - -b <bssid> <hanshake>
+-> crunch <min hane sayısı> <max hane sayısı> <kullanılacak karakterler> | john --restore=<kayıt adı> | aircrack-ng -w - -b <bssid> <hanshake>

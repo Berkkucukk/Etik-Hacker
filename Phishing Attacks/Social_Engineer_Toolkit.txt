@@ -1,0 +1,12 @@
+1.)SET aracımızı çalıştırıyoruz.
+2.)social engineer attacks'ı seçiyoruz.
+3.)Website attacks vectors'ü seçiyoruz.
+4.)Credential harvester attack method'u seçiyoruz.
+5.)Site cloner'ı seçiyoruz.
+6.)Kali ip adresimizi giriyoruz.
+7.)Site linkini veriyoruz. 
+Dns posion yapmak için Ettercap aracını kulanalım.
+8.)Ettercap'i açıyoruz.
+9.)Öncelikle modemi target1 hedef cihazı target2 olarak ayarlıyoruz.
+10.)MITM menüsünden arp spoof'u seçiyoruz ve mitm saldırımız başlamış oluyor.
+11.)Manage plugins menüsünden dns spoof'u aktif ediyoruz.

@@ -1,0 +1,16 @@
+Xss Açığı:
+    Bu açık sayesinde HTML ve JavaScript kodlarını sayfada çalıştırmak mümkündür.
+    XSS açığı türleri:
+        Reflected XSS: Bu XSS türünde kullanıcı parametre yerine JavaScript kodu girerek tespit edilebilen bir XSS açık türüdür.
+        Stored XSS: Kalıcı XSS türüdür. Kalıcı olması anlık olarak yansımayıp bir veritabanına veya başka bir yere kaydedilmesidir.Sonradan ise ziyaret edildiğinde çalışan bir XSS çeşididir.
+        DOM XSS: DOM(Document Object Model)'den kaynaklanan bir XSS türüdür. En tehlikeli XSS açığı türüdür.
+        
+    Reflected XSS:
+        Input alanına <scrip>alert("Reflected XSS")</script> kodunu giriyoruz. Reflected XSS sonucunu döndürürse buradan anlamamız gereken XSS açığının olduğudur.
+    Stored XSS:
+        Input alanına <scrip>alert("Stored XSS")</script> kodunu giriyoruz. Stored XSS sonucunu döndürürse buradan anlamamız gereken XSS açığının olduğudur.Bu siteye her girişimizde bu uyarıyla karşılaşıyorsak burada Stored XSS açığı vardır.
+        
+        
+    BEEF XSS Framework ile XSS Saldırısı:
+        Beef XSS Framework aracında yer alan hook kodunu açığın bulunduğu input alanına girelim. Hook kodunun tamamı input alanına sığmazsa sınırlandırmayı kapatmalıyız. input alanına sağ tıklayarak öğeyi incele diyoruz.
+        <textarea> kodunda yer alan maxlenght değerini arttırıp entera tıklıyoruz. 

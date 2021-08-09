@@ -1,0 +1,7 @@
+1.)Öncelikle nessus'ı kuruyoruz.
+2.)systemctl --no-pager status nessusd.(Diyerek sisteminiz her açıldığında nessus servisimizde başlamış olacak.)
+3.)İnternet tarayıcımızdan <pc_adı>:8834 adresine gidiyoruz.
+4.)Create New Scan diyerek bir tarama oluşturuyoruz.
+5.)Basic System Scan'i seçerek standar bir tarama başlatabiliriz.
+6.)Taranacak cihazların ip adreslerini belirledikten sonra kaydet diyerek kaydediyoruz.
+7.)Daha sonra kaydetmiş olduğumuz hedef taramayı başlatmak için işlemimizin sağında bulunan oka tıklıyoruz.

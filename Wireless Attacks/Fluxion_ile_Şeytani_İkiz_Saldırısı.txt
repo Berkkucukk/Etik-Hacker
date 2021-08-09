@@ -1,0 +1,16 @@
+1.)fluxion.sh diyerek fluxionu başlatıyoruz.
+->Handshake yakalamak:
+2.)Handshake'imiz yoksa handshake yakalıyoruz (2).
+3.)Hedef ağımızın numarasını girerek ağımızı seçiyoruz.
+4.)Deauth yöntemi olarak mdk4 veya aireplay-ng'yi seçiyoruz.
+5.)Parola doğrulama yöntemi olarak cowpatty'yi seçiyoruz.
+Ve handshake saldırımız başlamış oluyor.
+
+->Şeytani ikiz saldırısı yapmak:
+6.)Şeytani ikiz seçeneğini seçiyoruz(1).
+7.)Hedef ağımızın numarasını girerek ağımızı seçiyoruz.
+8.)Acces Point servisi olarak hostapd'yi seçiyoruz.
+9.)Parola doğrulama yöntemi olarak cowpatty'yi seçiyoruz.
+10.)Handshake'imizi veriyoruz.
+11.)SSL sertifiaksı oluşturu seçiyoruz ve internet bağlantısı olmayanı seçiyoruz.
+12.)İnternet şifresinin girilmesini istediğimiz siteyi seçiyoruz.

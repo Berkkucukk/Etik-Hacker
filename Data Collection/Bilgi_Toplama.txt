@@ -1,0 +1,34 @@
+Hackerlar yakalanmamak için çoğu zaman uzakta hatta başka ülkelerde bulunan firma veya kuruluşların sistemlerine girmeye çalışırlar.İlk başta hedef hakkında bildikleri hedefin ismi ve web adresidir.
+Bu aşamada hackerların ilk bulmak istedikleri şey hedefin hangi IP'lere sahip sunucuları dışarı açtığını bulmaktır. Firmanın internete açık kaç adet web servisi, xml servisi, ftp servisi var. Bu web sayfalarının adları neler.
+
+1.)Sitenin IP Adresinin Tespit Edilmesi:
+    Ping Aracı:
+        ->ping <domain>
+    Nslookup Aracı:
+        ->nslookup <domain>
+        
+2.)IP ve Domain Adından Hedefe Ait IP Bloğu ve Dışarı Açık SubDomainleri Bulma:
+    Dışarı açık her bir servis veya subdomain'e ait bir IP adresi bulunmaktadır. Bu nedenle birini elde ettiğiniz zaman diğerlerine de erişebiliyorsunuz.
+    Bu tip sorguları toplu olarak yapabileceğiniz whois sorgu siteleriçok başarılı ve kullanıcı dostu.
+    Örneğin www.robtex.com IP ve whis sorgusu yapılmasına imkan verir hemde alt domain bilgilerini toplu şekilde sunar.
+    Örneğin www.pentest-tools Bir domaine ait sub domainleri aratabilirsiniz. Eğer hedefe ait ip adresi veya ip bloklarına sahipseniz Fierce aracı vasıtasıyla bir ip bloğu için reverse DNS sorgusu yaptırarak SubDomainleri bulailirsiniz.
+    SubDomain bilgilerini theharvester ve fierce araçları ilede elde edebilirsiniz.
+    ->fierce --dns <domain>
+    ->theharvester -d <domain> -l 100 -b all
+    
+3.)IP ve Domain Name Bilgilerinden Şirket İletişim Bilgilerini Bulma:
+    İnternet dünyasında tüm IP ve Domain ad sistemi tekbir kuruluş tarafından yönetilir . Bu kuruluşun adı ICANN.
+    ICANN IP adreslerini ve domain ad sistemi ile ilgili işlerini RIR'lar vasıtasıyla dağıtılır. Kullanıcılar bir ip adresi alırken çeşitli bilgileri ICANN ile paylaşır.İşte Bu bilgileri direkt ICANN veya ilgili RIR'lardan veya bu bilgileri ICANN'dan alıp bize sunan whois Proxy sunucularından sorgulayabilirsiniz.Whois Proxy sunucularından aramak daha kolay ve hızlıdır. Örneğin www.domaintools.com veya kali linux üzerinden whois <domain/ip> ile de gerçekleştirilebilir. 
+    
+    Bu sitelere bir domain adıyla arama yaptırırken, size o domaini satın alırken satın alan kişi tarafından verilen bilgiler döner.
+    -Domainin ne zaman tescil edildiği.
+    -Domainin hangi firmadan tescil edildiği.
+    -Kimin tarafından tescil edildiği ve erişim telefon, adres ve email bilgileri.
+    -IP adresi
+    -Domain tahis bitiş süresi.
+    -DNS kayıtlarının tutulduğu sunucu bilgileri.
+    
+    Bu bilgiler saldırganın hedef hakkında bilgi toplarken edindiği ilk bilgilerdir. Kolay erişilirler ve doğruluk payı yüksektir.
+    
+4.)Zone Transfer ile Bir Domain'e Ait Olan DNS Kayıt Bilgilerini Elde Etme:
+    

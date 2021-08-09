@@ -1,0 +1,55 @@
+Exploit: Bir sistemin açığını sömürmek, kullanmak, ele geçirmek veya bilgi çekmek amacıyla kullanılan, oluşturulan yazılım ve araçlardır. Exploit'ler özellikle C,Perl,Python,Ruby gibi yazılım dillerinde yazılmaktadır. Exploitlere http://www.1337day.com, http://www.exploit-db.com sitelerinden ulaşabilirsiniz.
+
+Exploitlerin Çeşitleri:
+    Exploitler genel olarak 3 gruba ayrılır:
+        -Remote Exploits
+        -Local Exploits
+        -0(Zero) Day Exploits
+    
+    Remote Exploits: Bilgisayarımızdan veya herhangi bir cihazdan uzak sistemlere yapılan exploit'leme, sömürme işlemlerini remote exploit'ler sayesinde yaparız.
+    Local Exploits: Local Exploit'ler sistemde direkt olarak çalışabilen exploitlerdir. Genel olarak sistemde rütbe, hak yükseltme işlemlerinde kullanılır.
+    0(Zero) Day Exploits: Zero Day Exploit'ler sistemde açığın bulunduğu anda yazılan exploit'lerdir. Tehlikeli olmasının sebebi,sistemin yöneticileri gibi sistem sahiplerinin açıktan haberdar olmamasıdır.
+    
+Metasploit Nedir:
+    Metasploit güvenlik testleri için geliştirilmiş olan, açık kaynak kodlu bir penteration test aracıdır.
+    
+    Metasploit'in kendine özgü dosya sistemi vardır:
+        -Data: Data'lar metasploit tarafından kullanılır ve değiştirir.
+        -Lib: Framework'ü oluşturan sistemin ana yapısı, kütüphanesidir.
+        -Plugins: Otomatik olarak çalışabilen ve Framework'ün tüm özelliklerini kulanarak işlev gören eklentilerdir. İşlem esnasında çalışırlar.
+        -Tools: Yerine ve çalışmasına göre işlemleri halleden ve komut satırlarında çalışanaraçlardır.
+        -External: Harici kaynaklar 3.parti yazılımlar ve kaynak kodlar.
+        -Documentation: Framework'ü bilgilendirmek için kullanılan belgelerdir.
+        -Modules: Normal modüller.
+        -Scripts: Meterpreter gibi gelişmiş script'lerdir.
+        
+Genel Komut ve Kavramlar:
+    Exploit Seçme:
+        Metasploit ana penceresinde herhangi bir exploit veya modülü seçerken "use" komutu kullanılır.(Örnek: use /exploit/windows/smb/ms08_067_netapi)
+    Payload Seçme ve Exploit'e Uygun Payloadları Listeleme:
+        Payload, exploit sonrasında çalışan sistemde ilerlemeyi sağlayan ve istenilen işlemleri gerçekleştirmek için kullanılan modüllerdir.
+        "Show payloads" komutu ile seçilen exploit ile kullanabilecek tüm payloadları listeler.
+        "set PAYLOAD <payload_adı>" komutu ile payloadımızı seçiyoruz. Sistem exploit edildiğinde payload devreye girecektir.
+        
+Parametreleri Tanıma:
+    Exploitlerin ihtiyacı olduğu parametreleri görmek için "show options" komutu kullanılır.
+    -Name: Parametrenin ismi.
+    -Current Setting: Parametreye ait girilen değer.
+    -Required: Girilmesinin zorunlu olup olmadığı belirtilen yer. "No" ise zorunlu değil, "Yes" ise doldurulması zorunludur.
+    -Description: Parametreye ait açıklama.
+    
+    -RHOST: Hedef sistem "RemoteHost"'un kısaltılmasıdır.
+    -LHOST: Hedef sistem "LocalHost"'un kısaltılmasıdır ve bize ait local ip adresinin girilmesi istenir.
+    -Exploit target: Bu kısımda hedefin uyumlu olduğu sistemlere gösterilir.
+    
+    "Show targets" komutu ile sistemleri görüntüleyebiliriz. Eğer farklı bir seçenek istenirse "set traget ID" şeklinde girilebilir.
+    
+    
+Açık Kontrol Etme:
+    Exploit çalıştırılmadan istenirse açığın var olup olmadığını test edilebilir. Bundan önce istenilen parametreler girilmelidir. "check" komutu ile açığın var olup olmadığı kontrol edilir ve ekrana yazdırılır. Eğer yazdırılan sonuç "The target is vulnerable" yanıtı ekrana yansırsa açık mevcut demektir.
+    
+Exploit'in Uygulanması: 
+    Gerekli parametreler doldurulduktan sonra exploit etme aşaması gelir. Bunu yapmak için "exploit" komutu kullanılarak işlem gerçekleştirilmiş olur.
+    
+Exploit Arama:
+    

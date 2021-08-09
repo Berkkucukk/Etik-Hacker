@@ -1,0 +1,26 @@
+Beef:
+    ->service start apache2
+    ->beef-xss
+    Komutlarıyla apache sunucumuzu başlatıp ardından beef'i çalıştırıyruz.İlk girişimizde bizden bir şifre istiyor.
+    Daha sonra bize bir panel linki ve bir script veriyor.
+    Verdiği linke ctrl tuşuna basılı tutarak açalım. Şifremizi girip panele giriş yapıyoruz.
+    Apache serverimizdeki sitemizi açıp en altındaki script bölümüne beef'in verdiği scripti yapıştırıyoruz. Bu scriptteki ip bölümünü silip kali ip'mizi yazıyoruz.
+    Hedef bizim sitemize girmesi durumunda oltamıza takılmış olacak.
+    
+    
+Beef + Betercap:
+    ->https://dosya.co/welimrdpn3tm/beefcustom.zip.html adresinden beef custom dosyasını indiriyoruz. 
+    ->Bu dosyayı /usr/share/bettercap/caplets klasörünün içerisine atıyoruz.(Bettercap'in kurulu olduğu klasör.)
+    Bu dosyadaki .cap uzantılı dosyanın içerisine hedef cihazın ip adresini giriyoruz, JS dosyasına da kali ip'mizi girmemiz gerekiyor.
+    
+    ->bettercap --iface <interface> --caplets /usr/share/bettercap/caplets/beefcustom/beefcustom.cap 
+    
+Beef Sosyal Mühendislik:
+    Social Engineering klasöründen Google Phishing'i seçiyoruz. execute dememiz halinde hedef cihazda gmail login ekranı açılacaktır.
+    Social Engineering klasöründen Pretty Theft'i seçiyoruz. Dialog Type bölümünden hangi platforma yönelik olacağını seçiyoruz. Execute dememiz halinde hedef cihazda uyarı olarak facebook oturumu giriş ekranı gelecek.
+    Browser klasöründen Spyder Eye butonuna tıklıyoruz.Execute dememiz halinde hedef cihazın ekran görüntüsünü almış oluyoruz.
+
+    
+Beef XSS Saldırılarından Korunmak:
+    Bu tarz javascript tabanlı saldırılardan korunmak için yapmanız gereken tarayıcınızdan javascript özelliğini kapatmaktır veya filitrelemektir.
+    Eğer javascript özelliği kapatılırsa sitelerdeki bazı özellikleri kullanamaya biliriz.

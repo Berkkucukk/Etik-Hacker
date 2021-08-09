@@ -1,0 +1,2 @@
+Netdiscover ile Ağ keşifi:
+    ->netdiscover  (Komutu ile ağdaki cihazların ip ve mac adreslerini listeleyebiliriz.)

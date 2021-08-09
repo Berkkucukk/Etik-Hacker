@@ -1,0 +1,9 @@
+İfconfig ile mac adresi değişimi:
+    ifconfig <interface> down
+    ifconfig <interface> hw ether <new_mac>
+    ifconfig <interface> up
+    
+Macchanger ile mac adresi değişimi:
+    ifconfig <interface> down
+    macchanger --random <interface>
+    ifconfig <interface> up

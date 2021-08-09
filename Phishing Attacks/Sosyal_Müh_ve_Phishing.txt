@@ -1,0 +1,38 @@
+Metasploit ile Sirketlere Ait Eposta Hesaplarını Bulma:
+    ->use auxiliary/gather/search_email_collector
+    ->set DOMAIN <domain>
+    ->exploit
+    
+Social Engineer Tool Kit(S.E.T):
+    ->Social Engineer Attacks (1)
+    ->Website Attack Vectors (2)
+    ->Credential Harvester Attack Method(3)
+    ->Site Cloner (2)
+    İp Adresimizi giriyoruz.
+    Klonlamak istediğimiz site domainini giriyoruz.
+    Ve klonladığımız sahte siteye hedefimizin girmesi için dns spoof yapabiliriz.
+    
+Fake Mail Göndermek:
+    Tarayıcımızı açıp arama çubuğuna emkei.cz yazıp enter'a basıyoruz.
+    
+GHOST Phisher:
+    ->ghost-phisher
+    Üst menüden Fake http server seçeneğini seçelim.
+    Clone website seçeneğine tıklayarak klonlamak istediğimiz sitenin domainini giriyoruz.
+    Sitenin ip adresini öğrenmek lazım. Bunun için;
+    ->ping <domain>
+    Real Website IP Adress URL kısmına ip adresi giriyoruz
+    Saldırıyı başlatmak için Start butonuna tıklamak yeterli.
+    Girilen bilgileri görmek içinse üst menüden Harvester Credentials butonuna tıklıyoruz.
+
+HiddenEye:
+    HiddenEye'ı indirip kuruyoruz. HiddenEye klasörünün içerisindeyken;
+    ->python3 HiddenEye.py
+    ->y (diyerek kabul ediyoruz.)
+    Klonlamak istediğimiz sitenin numarasını seçiyoruz.
+    Keylogger özelliğini aktif etmek için "y" harfini giriyoruz.
+    Klonlamak istediğimiz sayfanın domain'ini giriyoruz.
+    Port numarasını belirliyoruz.
+    Server sistemi olarak istediğimizi seçebiliriz.(Tavsiyem NGROK)
+    Ve bize ngrok url'mizi veriyor. Bu sayede hem iç ağlarda hem dış ağlarda saldırımızı gerçekleştirebiliriz.
+    

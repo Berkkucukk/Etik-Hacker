@@ -1,0 +1,25 @@
+Zararlı Yazılımlar Nelerdir:
+    Zararlı yazılımlar, bilgisayarınıza veya mobil cihazınıza zarar vermek, kritik bilgileri çalmak, sistemdeki önemli dosyaları şifrelemek, sistemde anlık bilgi toplama gibi işlemler gerçekleştiren yazılımlardır. Amaçlarına göre birçok zararlı yazılım türü bulunmaktadır;
+        
+        Bilgisayar Virüsleri:
+            Bilgisayar virüsleri kullanıcının izni olmadan sistemdeki kritik bilgileri depolayan, sistemde yer alan önemli dosyalara ulaşıp bu dosyaları kopyalayan küçük boyutlu zararlı yazılımlardır. Bazı virüsler sistem içerisinde kendisini gizleyebilmektedir. Bir bilgisayar virüsü bir bilgisayardan diğer bilgisayarlara da çoğalabilmektedir.
+        
+        Malware:
+            Tüm zararlı yazılımlar malware sınıfına girmektedir.Bilgisayar virüsleri, trojan, solucan gibi zararlı yazılım türlerinin tamamı bu sınıfa dahildir.
+        
+        Solucan:
+            Solucan bir bilgisayar virüs çeşididir. Bu virüs çeşidinin amacı kendini bir bilgisayardan diğer bilgisayara kopyalamaktır.Bilgisayar kullanıcısının izmi olmadan kendini kopyalayan virüs çeşididir.
+        
+        Casus Yazılımlar:
+            Adı üstünde bir sisteme bulaştığı zaman kullanıcının izni olmaksızın sistemdeki verileri casus yazılım sahibine ulaştıran yazılıma denir. Casus yazılımların genellikle amacı önemli dosyalarınıza ve verilerinize sahip olmaktır.
+            
+        Truva Atı:
+            Truva atı en kötücül zararlı yazılımların başında gelmektedir. Sisteme bulaşmadan önce yararlı gibi gözüken truva atları sisteme bulaştıktan sonra yapamayacağı şey yoktur. Bir bilgisayar virüsü gibi sisteminize bulaştıktan sonra dosyalarınızı silebilir, sisteminizin uzaktan kontrolünü sağlayabilir. Diğer zararlı yazılımlara göre bilgisayarınızda tespiti oldukça güçtür.
+            Truva atları kendi içerisinde de birçok çeşidi bulunmaktadır.
+        
+        Adware(Reklam Yazılımı):
+            Adware zararlı yazılımı zararlı yazılımlar arasındaki en masun gibi olanı gibi gözüksede oldukça gıcık eden yazılımlardır. Sisteminizde zırt pırt reklam çıkmasına sebep olur.
+            
+        Keylogger:
+            Keylogger kullanıcının izni olmadan klavyeden girilen her tuşu kayıt altına alıp sahibine ileten zararlı yazılımlardır.
+            

